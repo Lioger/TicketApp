@@ -1,0 +1,14 @@
+.asset .content {
+    padding: 25px 30px;
+    display: grid;
+    row-gap: 20px;
+}
+
+.location {
+    display: flex;
+}
+
+.location .status {
+    margin-right: 5px;
+    width: 80px;
+}

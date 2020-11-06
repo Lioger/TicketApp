@@ -1,0 +1,13 @@
+.owner .content {
+    display: flex;
+    padding: 15px 25px;
+}
+
+.content .menInfo {
+    padding: 0 10px;
+}
+
+.menInfo .profession {
+    font-size: 11px;
+    color: #A8A8A7;
+}

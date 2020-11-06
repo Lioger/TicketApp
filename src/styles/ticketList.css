@@ -1,0 +1,59 @@
+.ticketList {
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.cellWrap {
+    padding: 0 30px;
+}
+
+.listItem {
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 2fr 4.5fr 9fr 2.7fr;
+    column-gap: 12px;
+    align-items: center;
+    border-bottom: 1px solid #212121;
+    font-size: 14px;
+}
+
+.cellWrap.choosen {
+    border-left: 5px solid #703FD9;
+    background-color: #414141;
+}
+
+.heading {
+    color: #6D726E;
+    font-size: 11px;
+}
+
+.status {
+    width: 60px;
+    text-align: center;
+    padding: 3px 5px;
+    border: 1px solid #212121;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.status.UNA {
+    color: #6D726E;
+}
+
+.status.ASD {
+    color: #D4AF56;
+}
+
+.status.COM {
+    color: #378850;
+}
