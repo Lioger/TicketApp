@@ -21,7 +21,7 @@ const TicketInfo = () => {
             <Asset assetName={ticket.asset} /> 
         </div>
     ) : (
-        <div className="ticket-info empty">
+        <div className="ticket-info ticket-info_empty">
             <div className="cross">x</div>
             <div className="text">No ticket selected</div>
         </div>

@@ -9,23 +9,33 @@
     -o-border-radius: 3px;
     
     .label {
-    color: #6D726E;
+        color: $labels-color;
     }
 
     .info-block {
         padding: 0;
         margin-bottom: 20px;
-        border: 2px solid #2C2C2C;
+        border: 2px solid $info-block-bdcolor;
     
         &__title {
-            padding: 5px 15px;
-            font-weight: 600;
-            background-color: #2C2C2C;
+            padding: 7px 15px;
+            font-weight: $title-weigth;
+            background-color: $info-block-bdcolor;
             color: #E6E6E6;
+        }
+
+        &__content {
+            display: grid;
+            padding: 15px 25px;
+            row-gap: 10px;
+        }
+
+        .info-parts {
+            padding-top: 5px;
         }
     }
 
-    &.empty {
+    &_empty {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -37,3 +47,7 @@
         }
     }
 }
+
+@import './../_components/owner';
+@import './../_components/details';
+@import './../_components/asset';

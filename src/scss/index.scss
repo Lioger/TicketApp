@@ -17,13 +17,12 @@ body {
 .App {
   padding: 0 15px;
   height: 100vh;
-  background-color: #252525;
+  background-color: $main-bg-color;
   color: $main-text-color;
-  font-size: 16px;
+  font-size: $main-text-size;
 }
 
 .main {
-  position: relative;
   display: flex;
   padding: 10px 0;
 }
@@ -35,13 +34,9 @@ body {
   padding-right: 15px;
 }
 
-@import './_components/title';
-@import './_components/form';
-@import './_components/owner';
-@import './_components/status';
-@import './_components/infoHeader';
-@import './_components/details';
-@import './_components/asset';
-
 @import './_layout/ticketList';
 @import './_layout/ticketInfo';
+@import './_components/title';
+@import './_components/form';
+@import './_components/status';
+@import './_components/infoHeader';

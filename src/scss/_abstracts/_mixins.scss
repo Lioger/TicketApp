@@ -1,0 +1,7 @@
+@mixin image-bdradius($property) {
+    border-radius: $property / 2;
+    -webkit-border-radius: $property / 2;
+    -moz-border-radius: $property / 2;
+    -ms-border-radius: $property / 2;
+    -o-border-radius: $property / 2;
+}

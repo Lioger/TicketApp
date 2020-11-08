@@ -38,4 +38,10 @@
         color: #6D726E;
         font-size: 13px;
     }
+
+    .owner {
+        width: 40px;
+        height: 40px;
+        @include image-bdradius(40px);
+    }
 }

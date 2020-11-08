@@ -1,23 +1,14 @@
-.list__item .owner {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
 .owner {
     
+    .info-block__content {
+        display: flex;
+        align-items: center;
+    }
+
     &-photo {
         width: 50px;
         height: 50px;
-        border-radius: 25px;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
+        @include image-bdradius(50px);
 }
 
     &-info {
@@ -25,8 +16,8 @@
     }
 
     &-profession {
-        letter-spacing: 1.5px;
+        letter-spacing: 1.3px;
         font-size: 11px;
-        color: #A8A8A7;
+        color: $main-text-color;
     }
 }   

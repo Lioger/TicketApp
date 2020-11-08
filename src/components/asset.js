@@ -7,15 +7,15 @@ const Asset = ({ assetName }) => {
             <div className="info-block__content">
                 <div className="name-wrapper">
                     <div className="label">Name</div>
-                    <div className="name info">{ assetName }</div>
+                    <div className="name info-parts">{ assetName }</div>
                 </div>
                 <div className="geoCode-wrapper">
                     <div className="label">GeoCode</div>
-                    <div className="geoCode info">137</div>
+                    <div className="geoCode info-parts">137</div>
                 </div>
                 <div className="location-wrapper">
                     <div className="label">Location</div>
-                    <div className="location info">
+                    <div className="location info-parts">
                         <div className="status">2.900</div>
                         <div className="status">19.100</div>
                     </div>
