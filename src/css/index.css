@@ -4,16 +4,14 @@
   box-sizing: border-box; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; }
 
 .App {
   padding: 0 15px;
   height: 100vh;
   background-color: #252525;
   color: #ADADAB;
-  font-size: 14px; }
+  font-size: 16px; }
 
 .main {
   position: relative;
@@ -25,3 +23,151 @@ body {
   flex-direction: column;
   width: 30%;
   padding-right: 15px; }
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  padding: 5px 7px 7px;
+  border-bottom: 4px solid #703FD9; }
+
+.search {
+  padding-bottom: 15px; }
+  .search .input {
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 36px;
+    padding: 5px 10px 5px 50px;
+    color: #ADADAB;
+    font-size: 14px;
+    background: none;
+    border: 1px solid #4d4d4d;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px; }
+
+.list__item .owner {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px; }
+
+.owner-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px; }
+
+.owner-info {
+  padding: 0 10px; }
+
+.owner-profession {
+  letter-spacing: 1.5px;
+  font-size: 11px;
+  color: #A8A8A7; }
+
+.status {
+  justify-self: end;
+  width: 60px;
+  text-align: center;
+  padding: 3px 7px;
+  border: 1px solid #212121;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px; }
+  .status.UNA {
+    color: #6D726E; }
+  .status.ASD {
+    color: #D4AF56; }
+  .status.COM {
+    color: #378850; }
+
+.infoHeader {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px; }
+
+.info-block__content {
+  display: grid;
+  padding: 15px 25px; }
+
+.owner .info-block__content .location {
+  display: flex; }
+  .owner .info-block__content .location .status {
+    margin-right: 5px;
+    width: 80px; }
+
+.tickets-list {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px; }
+
+.row-wrap {
+  border-left: 5px solid rgba(112, 63, 217, 0);
+  padding: 0 30px 0 25px;
+  transition: background-color .4s, border .2s;
+  -webkit-transition: background-color .4s, border .2s;
+  -moz-transition: background-color .4s, border .2s;
+  -ms-transition: background-color .4s, border .2s;
+  -o-transition: background-color .4s, border .2s; }
+  .row-wrap.choosen {
+    border-left: 5px solid #703fd9;
+    background-color: #414141; }
+
+.list__item {
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 2.5fr 6fr 9fr 3fr;
+  column-gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid #212121; }
+  .list__item_heading {
+    padding: 15px 0;
+    color: #6D726E;
+    font-size: 13px; }
+
+.ticket-info {
+  background-color: #333333;
+  width: 75%;
+  padding: 20px 25px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px; }
+  .ticket-info .label {
+    color: #6D726E; }
+  .ticket-info .info-block {
+    padding: 0;
+    margin-bottom: 20px;
+    border: 2px solid #2C2C2C; }
+    .ticket-info .info-block__title {
+      padding: 5px 15px;
+      font-weight: 600;
+      background-color: #2C2C2C;
+      color: #E6E6E6; }
+  .ticket-info.empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .ticket-info.empty .cross {
+      font-size: 40px;
+      padding: 5px 0; }

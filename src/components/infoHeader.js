@@ -1,5 +1,4 @@
 import React from 'react';
-import './../styles/infoHeader.css';
 
 const InfoHeader = () => {
     const now = new Date();

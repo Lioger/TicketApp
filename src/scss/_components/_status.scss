@@ -1,0 +1,24 @@
+.status {
+    justify-self: end;
+    width: 60px;
+    text-align: center;
+    padding: 3px 7px;
+    border: 1px solid #212121;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+
+    &.UNA {
+        color: #6D726E;
+    }
+
+    &.ASD {
+        color: #D4AF56;
+    }
+
+    &.COM {
+        color: #378850;
+    }
+}

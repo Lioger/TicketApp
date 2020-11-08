@@ -1,14 +1,20 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { setChoosenTicket } from './../actions';
 
-const ticketItem = ( {status, asset} ) => {
-    const now = new Date();
-    const dateFormatted = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}` 
+const ticketItem = ( {status, asset, reported, ownerPhoto, choosen, id} ) => {
+
+    const dispatch = useDispatch();
+
+    const ticketWrapClassName = `row-wrap ${ (choosen) ? 'choosen' : '' }`;
+    const ownerStyle = `url(${ownerPhoto})`;
     const statusClass = `status ${ status }`;
+
     return(
-        <div className="cellWrap">
-            <div className="listItem">
-                <div className="owner">OWNER</div>
-                <div className="reported">{ dateFormatted }</div>
+        <div className={ticketWrapClassName} onClick={ () => dispatch(setChoosenTicket(id)) }>
+            <div className="list__item">
+                <div className="owner" style={{backgroundImage: ownerStyle, backgroundSize: 'contain'}}></div>
+                <div className="reported">{ reported }</div>
                 <div className="asset">{ asset }</div>
                 <div className={ statusClass }>{ status }</div>
             </div>

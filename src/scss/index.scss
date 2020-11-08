@@ -1,3 +1,7 @@
+@import './_abstracts/variables';
+@import './_abstracts/mixins';
+@import './_abstracts/functions';
+
 * {
   padding: 0;
   margin: 0;
@@ -8,16 +12,14 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
   padding: 0 15px;
   height: 100vh;
   background-color: #252525;
-  color: #ADADAB;
-  font-size: 14px;
+  color: $main-text-color;
+  font-size: 16px;
 }
 
 .main {
@@ -32,3 +34,14 @@ body {
   width: 30%;
   padding-right: 15px;
 }
+
+@import './_components/title';
+@import './_components/form';
+@import './_components/owner';
+@import './_components/status';
+@import './_components/infoHeader';
+@import './_components/details';
+@import './_components/asset';
+
+@import './_layout/ticketList';
+@import './_layout/ticketInfo';
