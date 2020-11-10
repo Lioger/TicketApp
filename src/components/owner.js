@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Owner = ({ ownerName, ownerPhoto }) => {
-    const ownerStyle = `url(${ownerPhoto})`;
+const Owner = ({ owner }) => {
+    const ownerStyle = `url(${owner.photo})`;
+    const ownerProfession = (owner.profession).toUpperCase();
 
     return (
         <div className="owner info-block">
@@ -9,8 +10,8 @@ const Owner = ({ ownerName, ownerPhoto }) => {
             <div className="info-block__content">
                 <div className="owner-photo" style={{backgroundImage: ownerStyle, backgroundSize: 'contain'}}></div>
                 <div className="owner-info">
-                    <div className="owner-name">{ ownerName }</div>
-                    <div className="owner-profession">ELECTRICIAN</div>
+                    <div className="owner-name">{ owner.name }</div>
+                    <div className="owner-profession">{ ownerProfession }</div>
                 </div>
             </div>
         </div>

@@ -8,13 +8,13 @@ const ticketList = () => {
     const dispatch = useDispatch();
 
     const tickets = (ticketsArr.length) ? (
-        ticketsArr.map(({ status, asset, reported, owner, ownerPhoto, choosen, id }) => {
+        ticketsArr.map(({ owner, details, asset, choosen, id }) => {
             return <TicketItem
+                    ownerPhoto={owner.photo}
+                    reported={details.reported}
+                    asset={asset.name}
+                    status={details.status}
                     choosen={choosen} 
-                    status={status}
-                    asset={asset}
-                    reported={reported}
-                    ownerPhoto={ownerPhoto}
                     id={id}
                     key={id} 
                     />;

@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Details = ({ detailsReportedDate, detailsStatus }) => {
-    const statusClass = `status ${ detailsStatus }`;
+const Details = ({ details }) => {
+    const status = details.status.toUpperCase();
+    const statusClass = `status ${ status }`;
 
     return (
         <div className="details info-block">
@@ -9,17 +10,17 @@ const Details = ({ detailsReportedDate, detailsStatus }) => {
             <div className="info-block__content">
                 <div className="reported-wrapper">
                     <div className="label">Reported</div>
-                    <div className="reportedDate info-parts">{ detailsReportedDate }</div>
+                    <div className="reportedDate info-parts">{ details.reported }</div>
                 </div>
                 <div className="status-wrapper">
                     <div className="label">Status</div>
                     <div className="info-parts">
-                        <div className={ statusClass }>{ detailsStatus }</div>
+                        <div className={ statusClass }>{ status }</div>
                     </div>
                 </div>
                 <div className="description-wrapper">
                     <div className="label">Description</div>
-                    <div className="description info-parts">Ticket description</div>
+                    <div className="description info-parts">{ details.description }</div>
                 </div>
             </div>
         </div>

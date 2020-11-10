@@ -16,9 +16,9 @@ const TicketInfo = () => {
     return (choosenTicketArr.length) ? (
         <div className="ticket-info">
             <InfoHeader />
-            <Owner ownerName={ticket.ownerName} ownerPhoto={ticket.ownerPhoto} />
-            <Details detailsReportedDate={ticket.reported} detailsStatus={ticket.status} />
-            <Asset assetName={ticket.asset} /> 
+            <Owner owner={ticket.owner} />
+            <Details details={ticket.details} />
+            <Asset asset={ticket.asset} /> 
         </div>
     ) : (
         <div className="ticket-info ticket-info_empty">

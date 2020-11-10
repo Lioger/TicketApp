@@ -2,13 +2,23 @@ import KentPhoto from './../images/kent.jpeg';
 import WaynePhoto from './../images/wayne.jpg';
 import ParkerPhoto from './../images/parker.jpg';
 
-const [wayne, kent, parker] = ["Bruce Wayne", "Clark Kent", "Peter Parker"];
+const [wayne, kent, parker] = [{ name: "Bruce Wayne", photo: WaynePhoto, profession: "Billionaire"},
+                                { name: "Clark Kent", photo: KentPhoto, profession: "Electrician"},
+                                { name: "Peter Parker", photo: ParkerPhoto, profession: "Student"}];
 
 const ticketsReducer = (state = [
-    {status: "ASD", asset: "Sign", reported:"29/07/19 17:30", ownerName: wayne, ownerPhoto: WaynePhoto, choosen: false, id: Math.random()},
-    {status: "COM", asset: "Switch", reported:"26/07/19 17:30", ownerName: kent, ownerPhoto: KentPhoto, choosen: false, id: Math.random()},
-    {status: "UNA", asset: "Switch", reported:"24/07/19 17:30", ownerName: kent, ownerPhoto: KentPhoto, choosen: false, id: Math.random()}, 
-    {status: "COM", asset: "Switch reporting", reported:"28/07/19 15:31", ownerName: parker, ownerPhoto: ParkerPhoto, choosen: false, id: Math.random()}, 
+    {owner: { name: wayne.name, photo: wayne.photo, profession: wayne.profession },
+        details: { reported: "29/07/19 12:41", status: "ASD", description: "Ticket description" },
+        asset: { name: "Sign", geoCode: "137", location: { x: "2.900", y: "19.100" } },
+        choosen: false, id: Math.random()},
+    {owner: { name: kent.name, photo: kent.photo, profession: kent.profession },
+        details: { reported: "26/07/19 14:23", status: "COM", description: "Ticket description" },
+        asset: { name: "Switch", geoCode: "137", location: { x: "2.900", y: "19.100" } },
+        choosen: false, id: Math.random()},
+    {owner: { name: parker.name, photo: parker.photo, profession: parker.profession },
+        details: { reported: "30/07/19 19:52", status: "UNA", description: "Ticket description" },
+        asset: { name: "Switch coding", geoCode: "137", location: { x: "2.900", y: "19.100" } },
+        choosen: false, id: Math.random()},
 ], action) => {
     switch (action.type) {
         case 'SETCHOOSENTICKET':
