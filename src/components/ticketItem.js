@@ -2,11 +2,11 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setChoosenTicket } from './../actions';
 
-const ticketItem = ( {status, asset, reported, ownerPhoto, choosen, id} ) => {
+const ticketItem = ( {status, asset, reported, ownerPhoto, choosen, id, hidden} ) => {
 
     const dispatch = useDispatch();
 
-    const ticketWrapClassName = `row-wrap ${ (choosen) ? 'choosen' : '' }`;
+    const ticketWrapClassName = `row-wrap ${ (choosen) ? 'choosen' : '' } ${ (hidden) ? 'hidden' : '' }`;
     const ownerStyle = `url(${ownerPhoto})`;
     const statusClass = `status ${ status }`;
 

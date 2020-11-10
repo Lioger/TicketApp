@@ -1,0 +1,20 @@
+.button {
+    &_delete {
+        display: flex;
+        justify-content: center;
+        padding: 10px 40px;
+        background-color: $delete-button-color;
+        color: $title-color;
+        cursor: pointer;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+}
+}
+
+.delete-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}

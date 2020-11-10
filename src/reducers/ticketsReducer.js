@@ -21,6 +21,9 @@ const ticketsReducer = (state = [
         choosen: false, id: Math.random()},
 ], action) => {
     switch (action.type) {
+        case 'REMOVETICKET':
+            return state = state.filter((ticket) => ticket.id !== action.payload);
+
         case 'SETCHOOSENTICKET':
             return state = state.map((ticket) => {
                 ticket = {...ticket, choosen: false};
@@ -29,14 +32,14 @@ const ticketsReducer = (state = [
                 };
             return ticket});
 
-        // case 'FINDTODOS':
-        //     return state = state.map((todo) => {
-        //         if (!todo.content.toLowerCase().includes(action.payload.toLowerCase())) {
-        //             return {...todo, hidden: true};
-        //         } else {
-        //             return {...todo, hidden: false};
-        //         };
-        //     });    
+        case 'FINDTICKETS':
+            return state = state.map((ticket) => {
+                if (!ticket.asset.name.toLowerCase().includes(action.payload.toLowerCase())) {
+                    return {...ticket, hidden: true};
+                } else {
+                    return {...ticket, hidden: false};
+                };
+            });    
 
         // case 'ALLFILTER':
         //     return state = state.map((todo) => ({...todo, hidden: false}));

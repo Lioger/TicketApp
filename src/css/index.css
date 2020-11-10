@@ -27,7 +27,7 @@ body {
   background-color: #323232;
   display: flex;
   flex-direction: column;
-  height: 800px;
+  height: 85vh;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -46,6 +46,8 @@ body {
     border-left: 5px solid #703fd9;
     background-color: #414141;
     color: #E6E6E6; }
+  .row-wrap.hidden {
+    display: none; }
 
 .list__item {
   padding: 10px 0;
@@ -190,3 +192,20 @@ body {
     color: #D4AF56; }
   .status.COM {
     color: #378850; }
+
+.button_delete {
+  display: flex;
+  justify-content: center;
+  padding: 10px 40px;
+  background-color: #da4848;
+  color: #E6E6E6;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px; }
+
+.delete-wrapper {
+  display: flex;
+  justify-content: flex-end; }

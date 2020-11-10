@@ -4,6 +4,7 @@ import InfoHeader from './infoHeader';
 import Owner from './owner';
 import Details from './details';
 import Asset from './asset';
+import DeleteButton from './delete';
 
 const TicketInfo = () => {
     const ticketsArr = useSelector(state => state.tickets);
@@ -19,6 +20,7 @@ const TicketInfo = () => {
             <Owner owner={ticket.owner} />
             <Details details={ticket.details} />
             <Asset asset={ticket.asset} /> 
+            <DeleteButton ticketID={ticket.id} />
         </div>
     ) : (
         <div className="ticket-info ticket-info_empty">
