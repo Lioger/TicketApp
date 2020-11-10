@@ -5,3 +5,16 @@
     -ms-border-radius: $property / 2;
     -o-border-radius: $property / 2;
 }
+
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin block-bdradius() {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}

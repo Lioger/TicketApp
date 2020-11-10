@@ -1,5 +1,19 @@
 .search {
+    position: relative;
     padding-bottom: 15px;
+
+    &-icon {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 10px;
+        left: 4%;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
 
     .input {
         outline: none;

@@ -37,14 +37,15 @@ body {
 .row-wrap {
   border-left: 5px solid rgba(112, 63, 217, 0);
   padding: 0 30px 0 25px;
-  transition: background-color .4s, border .2s;
-  -webkit-transition: background-color .4s, border .2s;
-  -moz-transition: background-color .4s, border .2s;
-  -ms-transition: background-color .4s, border .2s;
-  -o-transition: background-color .4s, border .2s; }
+  transition: background-color .4s, border .2s, color .3s;
+  -webkit-transition: background-color .4s, border .2s, color .3s;
+  -moz-transition: background-color .4s, border .2s, color .3s;
+  -ms-transition: background-color .4s, border .2s, color .3s;
+  -o-transition: background-color .4s, border .2s, color .3s; }
   .row-wrap.choosen {
     border-left: 5px solid #703fd9;
-    background-color: #414141; }
+    background-color: #414141;
+    color: #E6E6E6; }
 
 .list__item {
   padding: 10px 0;
@@ -78,11 +79,15 @@ body {
   .ticket-info .label {
     color: #6D726E; }
   .ticket-info .info-block {
-    padding: 0;
     margin-bottom: 20px;
-    border: 2px solid #2C2C2C; }
+    border: 2px solid #2C2C2C;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px; }
     .ticket-info .info-block__title {
-      padding: 7px 15px;
+      padding: 8px 15px;
       font-weight: 600;
       background-color: #2C2C2C;
       color: #E6E6E6; }
@@ -100,6 +105,12 @@ body {
     .ticket-info_empty .cross {
       font-size: 40px;
       padding: 5px 0; }
+
+.infoHeader {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px; }
 
 .owner .info-block__content {
   display: flex;
@@ -132,10 +143,20 @@ body {
   font-size: 26px;
   font-weight: 600;
   padding: 5px 7px 7px;
-  border-bottom: 4px solid #703FD9; }
+  border-bottom: 4px solid #703fd9; }
 
 .search {
+  position: relative;
   padding-bottom: 15px; }
+  .search-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 10px;
+    left: 4%;
+    opacity: 0.5; }
+    .search-icon:hover {
+      opacity: .8; }
   .search .input {
     outline: none;
     box-sizing: border-box;
@@ -169,9 +190,3 @@ body {
     color: #D4AF56; }
   .status.COM {
     color: #378850; }
-
-.infoHeader {
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px; }

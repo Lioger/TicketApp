@@ -28,15 +28,14 @@ body {
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
+  @include flex-column();
+  width: $menu-width;
   padding-right: 15px;
 }
 
 @import './_layout/ticketList';
 @import './_layout/ticketInfo';
+
 @import './_components/title';
 @import './_components/form';
 @import './_components/status';
-@import './_components/infoHeader';
