@@ -1,5 +1,5 @@
 .ticket-info {
-    background-color: hsl(0, 0%, 20%);
+    background-color: $blocks-bg-color;
     width: 75%;
     padding: 20px 25px;
     @include block-bdradius();

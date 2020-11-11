@@ -18,7 +18,7 @@ const Search = () => {
     return (
         <form className="search" onSubmit={ (e) => {e.preventDefault()} }>
             <div className="search-icon" style={{backgroundImage: searchIconStyle, backgroundSize: 'contain'}}></div>
-            <input className="input" type="text" onChange={ handleChange } placeholder="Search..." value={search} />
+            <input className="input input_search" type="text" onChange={ handleChange } placeholder="Search..." value={search} />
         </form>
     )
 };

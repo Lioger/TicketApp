@@ -7,8 +7,8 @@ const DeleteButton = ({ ticketID }) => {
 
     return (
         <div className="delete-wrapper">
-            <div className="button_delete button" onClick={ () => dispatch(removeTicket(ticketID)) }>
-                Delete ticket
+            <div className="button_deleteTicket button" onClick={ () => dispatch(removeTicket(ticketID)) }>
+                Delete Ticket
             </div>
         </div>
     )

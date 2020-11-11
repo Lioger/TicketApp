@@ -1,7 +1,7 @@
 .tickets-list {
-    background-color: #323232;
+    background-color: $blocks-bg-color;
     @include flex-column();
-    height: 85vh;
+    height: 80vh;
     @include block-bdradius();
 }
 
