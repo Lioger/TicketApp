@@ -9,27 +9,31 @@ import DeleteButton from './delete';
 
 const TicketInfo = () => {
     const ticketsArr = useSelector(state => state.tickets);
+    const addButtonClicked = useSelector(state => state.addButton);
 
     const dispatch = useDispatch();
 
-    const choosenTicketArr = ticketsArr.filter( (ticket) => ticket.choosen )
-    const ticket = choosenTicketArr[0]
+    const ticket = ticketsArr.filter( (ticket) => ticket.choosen )[0];
+    let output = '';
 
-    return (choosenTicketArr.length) ? (
-        <div className="ticket-info">
+    if (addButtonClicked) {
+        output = <AddTicketForm />
+    } else if (ticket) {
+        output = <div className="ticket-info">
             <InfoHeader />
             <Owner owner={ticket.owner} />
             <Details details={ticket.details} />
             <Asset asset={ticket.asset} /> 
             <DeleteButton ticketID={ticket.id} />
-        </div>
-        // <AddTicketForm />
-    ) : (
-        <div className="ticket-info ticket-info_empty">
+        </div> 
+    } else {
+        output = <div className="ticket-info ticket-info_empty">
             <div className="cross">x</div>
             <div className="text">No ticket selected</div>
         </div>
-    );
+    };
+
+    return output;
 };
 
 export default TicketInfo;

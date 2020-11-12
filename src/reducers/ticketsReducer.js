@@ -21,6 +21,9 @@ const ticketsReducer = (state = [
         choosen: false, id: Math.random()},
 ], action) => {
     switch (action.type) {
+        case 'SETTICKETS':
+            return state = action.payload;
+
         case 'REMOVETICKET':
             return state = state.filter((ticket) => ticket.id !== action.payload);
 

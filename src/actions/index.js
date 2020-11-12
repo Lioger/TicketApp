@@ -1,3 +1,10 @@
+export const setTickets = (ticketsArr) => {
+    return {
+        type: 'SETTICKETS',
+        payload: ticketsArr,
+    }
+}
+
 export const removeTicket = (id) => {
     return {
         type: 'REMOVETICKET',
@@ -23,5 +30,12 @@ export const setSearch = (content) => {
     return {
         type: 'SEARCH',
         payload: content,
+    };
+}
+
+export const addButtonClick = (boolClick) => {
+    return {
+        type: 'ADDBUTTONCLICK',
+        payload: boolClick,
     };
 }

@@ -71,7 +71,7 @@ body {
 
 .ticket-info {
   background-color: #323232;
-  width: 75%;
+  width: 70%;
   padding: 20px 25px;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -149,7 +149,8 @@ body {
   .title_main {
     border-bottom: 4px solid #703fd9; }
   .title_addTicket {
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 20px; }
 
 .input {
   outline: none;
@@ -184,7 +185,7 @@ body {
 
 .add-form-wrapper {
   background-color: #323232;
-  width: 75%;
+  width: 70%;
   padding: 3% 10%; }
   .add-form-wrapper .add-form {
     display: flex;
@@ -201,11 +202,10 @@ body {
     .add-form-wrapper .add-form .textarea {
       resize: none;
       height: 100px; }
-
-.location-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px; }
+    .add-form-wrapper .add-form .location-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 40px; }
 
 .status {
   justify-self: end;

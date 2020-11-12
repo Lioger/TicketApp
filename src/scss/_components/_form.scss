@@ -39,7 +39,7 @@
 
 .add-form-wrapper {
     background-color: $blocks-bg-color;
-    width: 75%;
+    width: 70%;
     padding: 3% 10%;
 
     .add-form {
@@ -56,11 +56,11 @@
             resize: none;
             height: 100px;
         }
-    }
-}
 
-.location-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 40px;
+        .location-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 40px;
+        }
+    }
 }
