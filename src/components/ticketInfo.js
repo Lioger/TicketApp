@@ -16,14 +16,14 @@ const TicketInfo = () => {
     const ticket = choosenTicketArr[0]
 
     return (choosenTicketArr.length) ? (
-        // <div className="ticket-info">
-        //     <InfoHeader />
-        //     <Owner owner={ticket.owner} />
-        //     <Details details={ticket.details} />
-        //     <Asset asset={ticket.asset} /> 
-        //     <DeleteButton ticketID={ticket.id} />
-        // </div>
-        <AddTicketForm />
+        <div className="ticket-info">
+            <InfoHeader />
+            <Owner owner={ticket.owner} />
+            <Details details={ticket.details} />
+            <Asset asset={ticket.asset} /> 
+            <DeleteButton ticketID={ticket.id} />
+        </div>
+        // <AddTicketForm />
     ) : (
         <div className="ticket-info ticket-info_empty">
             <div className="cross">x</div>
