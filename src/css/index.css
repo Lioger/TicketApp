@@ -197,6 +197,8 @@ body {
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px; }
+    .add-form-wrapper .add-form option {
+      color: #323232; }
     .add-form-wrapper .add-form .label {
       padding: 10px 0 5px; }
     .add-form-wrapper .add-form .textarea {

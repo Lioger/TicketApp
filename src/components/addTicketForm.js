@@ -34,7 +34,7 @@ const AddTicketForm = () => {
                             details: { reported: dateTime, status: form.status.value, description: form.inputDescription.value },
                             asset: { name: form.inputAssetName.value, geoCode: form.inputGeoCode.value, location: { x: form.inputLocationX.value, y: form.inputLocationY.value } },
                             choosen: false, id: Math.random()};
-        dispatch(setTickets([...ticketsArr, newTicket]));
+        dispatch(setTickets([newTicket, ...ticketsArr]));
     }
 
     const clearForm = (e) => {
@@ -47,8 +47,6 @@ const AddTicketForm = () => {
         form.inputGeoCode.value = '';
         form.inputLocationX.value = '';
         form.inputLocationY.value = '';
-
-
     }
 
 

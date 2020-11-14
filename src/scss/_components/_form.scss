@@ -47,6 +47,10 @@
         padding: 10px 30px 20px;
         border: 2px solid $info-block-bdcolor;
         @include block-bdradius();
+
+        option {
+            color: $blocks-bg-color;
+        }
     
         .label {
             padding: 10px 0 5px;
