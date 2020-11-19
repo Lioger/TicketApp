@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const Title = () => {
     return(
-        <div className="title_main title">
-            Tickets
-        </div>
+        <Link to={'/'} className="link">
+            <div className="title_main title">
+                Tickets
+            </div>
+        </Link>
     )
 };
 

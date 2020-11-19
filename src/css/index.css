@@ -23,6 +23,10 @@ body {
   width: 30%;
   padding-right: 15px; }
 
+.link {
+  color: #ADADAB;
+  text-decoration: none; }
+
 .tickets-list {
   background-color: #323232;
   display: flex;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { removeTicket } from './../actions';
 
 const DeleteButton = ({ ticketID }) => {
@@ -7,9 +8,11 @@ const DeleteButton = ({ ticketID }) => {
 
     return (
         <div className="delete-wrapper">
-            <div className="button_deleteTicket button" onClick={ () => dispatch(removeTicket(ticketID)) }>
-                Delete Ticket
-            </div>
+            <Link to={'/'} className="link">
+                <div className="button_deleteTicket button" onClick={ () => dispatch(removeTicket(ticketID)) }>
+                    Delete Ticket
+                </div>
+            </Link>
         </div>
     )
 };
