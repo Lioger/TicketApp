@@ -20,7 +20,8 @@ const AddTicketForm = () => {
         e.preventDefault();
 
         const now = new Date();
-        const dateTime = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`;
+        const year = now.getFullYear().toString().slice(2);
+        const dateTime = `${now.getDate()}/${now.getMonth() + 1}/${year} ${now.getHours()}:${now.getMinutes()}`;
 
         const form = e.target;
         let owner = {};
