@@ -1,6 +1,7 @@
 import React from 'react';
-import TicketItem from './ticketItem';
 import { useSelector, useDispatch } from 'react-redux';
+
+import TicketItem from './ticketItem';
 
 const ticketList = () => {
     const ticketsArr = useSelector(state => state.tickets);

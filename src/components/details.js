@@ -1,9 +1,7 @@
 import React from 'react';
+import Status from './status';
 
 const Details = ({ details }) => {
-    const status = details.status.toUpperCase();
-    const statusClass = `status ${ status }`;
-
     return (
         <div className="details info-block">
             <div className="info-block__title">Details</div>
@@ -15,7 +13,7 @@ const Details = ({ details }) => {
                 <div className="status-wrapper">
                     <div className="label">Status</div>
                     <div className="info-parts">
-                        <div className={ statusClass }>{ status }</div>
+                        <Status status={details.status} />
                     </div>
                 </div>
                 <div className="description-wrapper">

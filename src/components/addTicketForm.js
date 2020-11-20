@@ -18,11 +18,12 @@ const AddTicketForm = () => {
 
     const addNewTicket = (e) => {
         e.preventDefault();
+
         const now = new Date();
         const dateTime = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`;
+
         const form = e.target;
         let owner = {};
-        let status = '';
         if (form.owner.value === 'wayne') {
             owner = wayne;
         } else if (form.owner.value === 'kent') {
@@ -34,6 +35,7 @@ const AddTicketForm = () => {
                             details: { reported: dateTime, status: form.status.value, description: form.inputDescription.value },
                             asset: { name: form.inputAssetName.value, geoCode: form.inputGeoCode.value, location: { x: form.inputLocationX.value, y: form.inputLocationY.value } },
                             choosen: false, id: Math.random()};
+                            
         dispatch(setTickets([newTicket, ...ticketsArr]));
     }
 

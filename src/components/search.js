@@ -4,8 +4,8 @@ import SearchIcon from './../images/search.png';
 import { findTickets, setSearch } from './../actions';
 
 const Search = () => {
-
     const search = useSelector(state => state.search);
+    
     const dispatch = useDispatch();
 
     const handleChange = (e) => {

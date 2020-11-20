@@ -1,24 +1,26 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setChoosenTicket, addButtonClick } from './../actions';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
+
+import { setChoosenTicket, addButtonClick } from './../actions';
+import Status from './status';
 
 const ticketItem = ( {status, asset, reported, ownerPhoto, choosen, id, hidden} ) => {
     
     const dispatch = useDispatch();
 
-    const ticketWrapClassName = `row-wrap ${ (choosen) ? 'choosen' : '' } ${ (hidden) ? 'hidden' : '' }`;
+    const ticketWrapClasses = classNames("row-wrap", { choosen, hidden});
     const ownerStyle = `url(${ownerPhoto})`;
-    const statusClass = `status ${ status }`;
 
     return(
         <Link to={`/${id}`} className="link">
-            <div className={ticketWrapClassName} onClick={ () => { dispatch(addButtonClick(false)); dispatch(setChoosenTicket(id)) } }>
+            <div className={ticketWrapClasses} onClick={ () => { dispatch(addButtonClick(false)); dispatch(setChoosenTicket(id)) } }>
                 <div className="list__item">
                     <div className="owner" style={{backgroundImage: ownerStyle, backgroundSize: 'contain'}}></div>
                     <div className="reported">{ reported }</div>
                     <div className="asset">{ asset }</div>
-                    <div className={ statusClass }>{ status }</div>
+                    <Status status={status} />
                 </div>
             </div>
         </Link> 

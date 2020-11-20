@@ -1,16 +1,14 @@
 import React from 'react';
 
-const InfoHeader = () => {
-    const now = new Date();
-    const dateTime = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}` 
+const InfoHeader = ({ ticket }) => {
     return (
         <div className="infoHeader">
             <div className="ticketNo">
                 <span className="label">TICKET NO. </span>
-                <span>PU-OV-5</span>
+                <span>{ticket.id}</span>
             </div>
             <div className="lastUpd label">
-                LAST UPDATED { dateTime }
+                LAST UPDATED { ticket.details.reported }
             </div>
         </div>    
     )
